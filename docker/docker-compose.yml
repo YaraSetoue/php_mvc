@@ -1,0 +1,14 @@
+services:
+
+  app_php_mvc:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+
+    ports:
+      - "8080:80"
+
+    volumes:
+     - ../app:/var/www/html
+
+    container_name: app_php_mvc
